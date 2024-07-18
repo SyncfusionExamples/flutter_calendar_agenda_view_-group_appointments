@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(const AgendaItemHeight());
+void main() => runApp(const CustomAgendaItem());
 
-class AgendaItemHeight extends StatelessWidget {
-  const AgendaItemHeight({super.key});
+class CustomAgendaItem extends StatelessWidget {
+  const CustomAgendaItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +40,6 @@ class ScheduleExample extends State<CustomAgendaHeight> {
           Expanded(
             child: SfCalendar(
               view: CalendarView.month,
-              showTodayButton: true,
-              showDatePickerButton: true,
               onTap: (CalendarTapDetails details) {
                 if (details.targetElement == CalendarElement.calendarCell) {
                   _showAppointmentsForDate(details.date!);
